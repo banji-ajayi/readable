@@ -1,0 +1,106 @@
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  margin: 0 5px;
+  font-size: 0;
+  cursor:pointer;
+}
+.icon-desc {
+  line-height: 1
+}
+.icon.like {
+  background-image: url('../images/like.png')
+}
+
+.icon.dislike {
+  background-image: url('../images/dislike.png')
+}
+
+.icon.remove {
+  background-image: url('../images/delete.png')
+}
+
+.icon.add {
+  background-image: url('../images/add.png')
+}
+.icon.edit {
+  background-image: url('../images/edit.png')
+}
+.icon.readFull {
+  background-image: url('../images/readmore.png')
+}
+.votes {
+  color: #444;
+  font-weight: bold;
+  font-size: 16px
+}
+.header_right_center{
+  position: absolute;
+  right: 20px;
+  top: 25%;
+}
+.add_btn{
+  background-color:rgb(219, 211, 211);
+  width:50px;
+  height:50px;
+  border-radius:100%;
+  background:rgb(219, 211, 211);
+  border:none;
+  outline:none;
+  color:#FFF;
+  font-size:33px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  cursor: pointer;
+}
+
+
+.post-form, .comment-form {
+  max-width: 800px;
+  margin: auto;
+}
+
+.form-title {
+  background: wheat;
+  margin: 0;
+  padding: 10px;
+}
+
+.post-body-edit {
+  min-height: 300px;
+}
+
+.comment-body-edit{
+  min-height: 220px;
+}
+.sort-option {
+  position: absolute;
+  right: 12px;
+}
+
+
+
+.comments-section-title {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  padding-bottom: 12px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.comment-add {
+  padding: 1px 10px 1px 2px;
+  font-size: 13px;
+  font-weight: normal;
+}
+.comment {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: 3px;
+  padding: 12px;
+  margin: 14px 0px;
+}
