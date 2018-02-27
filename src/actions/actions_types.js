@@ -1,0 +1,20 @@
+
+export const DATA_LOADING = 'DATA_LOADING'
+export const SORT_POSTS = 'SORT_POSTS'
+export const VOTE_POST = 'VOTE_POST'
+export const ADD_POST = 'ADD_POST'
+export const UPDATE_POST = 'UPDATE_POST'
+export const DELETE_POST = 'DELETE_POST'
+export const LOAD_POST = 'LOAD_POST'
+export const CATEGORIES_LOADED = 'CATEGORIES_LOADED'
+export const LOAD_POST_BY_CATEGORY = 'LOAD_POST_BY_CATEGORY'
+export const LOAD_POST_COMMENT = 'LOAD_POST_COMMENT'
+export const SHOW_CATEGORY_POST = 'SHOW_CATEGORY_POST'
+
+export const VOTE_COMMENT = 'VOTE_COMMENT'
+export const ADD_COMMENT = 'ADD_COMMENT'
+export const UPDATE_COMMENT = 'UPDATE_COMMENT'
+export const DELETE_COMMENT = 'DELETE_COMMENT'
+
+export const DISPLAY_FORM = 'DISPLAY_FORM'
+export const HIDE_FORM = 'HIDE_FORM'

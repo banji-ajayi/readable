@@ -6,7 +6,6 @@ class BreadCrumbs extends Component {
   render() {
     const {url} = this.props
     const postPaths = utils.pathFromUrl(url)
-    const lastIndex = postPaths && (postPaths.length - 1)
 
     return (
       <ul className="nav-list">

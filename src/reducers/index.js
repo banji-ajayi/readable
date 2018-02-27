@@ -1,8 +1,8 @@
-import * as ACTIONS from '../actions/index'
+import * as ACTION_TYPES from '../actions/actions_types'
 
 export function categories(state = [], action) {
   switch (action.type) {
-    case ACTIONS.CATEGORIES_LOADED:
+    case ACTION_TYPES.CATEGORIES_LOADED:
       return action.categories
     default:
       return state
@@ -12,7 +12,7 @@ export function categories(state = [], action) {
 export function posts(state = {}, action) {
   const { posts, post, type} = action
   switch (type) {
-    case ACTIONS.LOAD_POST:
+    case ACTION_TYPES.LOAD_POST:
       if(posts) {
         return posts.reduce((obj, p) => {
           obj[p.id] = p
@@ -20,10 +20,10 @@ export function posts(state = {}, action) {
         }, {})
       }
       return state
-    case ACTIONS.VOTE_POST:
-    case ACTIONS.ADD_POST:
-    case ACTIONS.UPDATE_POST:
-    case ACTIONS.DELETE_POST:
+    case ACTION_TYPES.VOTE_POST:
+    case ACTION_TYPES.ADD_POST:
+    case ACTION_TYPES.UPDATE_POST:
+    case ACTION_TYPES.DELETE_POST:
       return {
         ...state,
         [post.id]: post
@@ -36,7 +36,7 @@ export function posts(state = {}, action) {
 export function comments(state = {}, action) {
   const {comments, comment} = action
   switch (action.type) {
-    case ACTIONS.LOAD_POST_COMMENT:
+    case ACTION_TYPES.LOAD_POST_COMMENT:
       if(comments) {
         return comments.reduce((object, cmt) => {
           object[cmt.id] = cmt
@@ -44,14 +44,14 @@ export function comments(state = {}, action) {
         }, {})
       }
       return state
-    case ACTIONS.VOTE_COMMENT:
-    case ACTIONS.ADD_COMMENT:
-    case ACTIONS.UPDATE_COMMENT:
+    case ACTION_TYPES.VOTE_COMMENT:
+    case ACTION_TYPES.ADD_COMMENT:
+    case ACTION_TYPES.UPDATE_COMMENT:
       return {
         ...state,
         [comment.id] : comment
       }
-    case ACTIONS.DELETE_COMMENT:
+    case ACTION_TYPES.DELETE_COMMENT:
       delete state[comment.id]
       return state
     default:
@@ -61,7 +61,7 @@ export function comments(state = {}, action) {
 
 export function filterByCategory(state = '', action) {
   switch (action.type) {
-    case ACTIONS.SHOW_CATEGORY_POST:
+    case ACTION_TYPES.SHOW_CATEGORY_POST:
       return action.category
     default:
       return state
@@ -70,8 +70,8 @@ export function filterByCategory(state = '', action) {
 
 export function loadingData(state = false, action) {
   switch (action.type) {
-    case ACTIONS.DATA_LOADING:
-      return !!action.isLoading
+    case ACTION_TYPES.DATA_LOADING:
+      return action.isLoading
     default:
       return state;
   }
@@ -79,7 +79,7 @@ export function loadingData(state = false, action) {
 
 export function sortPosts(state = '', action) {
   switch (action.type) {
-    case ACTIONS.SORT_POSTS:
+    case ACTION_TYPES.SORT_POSTS:
       return action.sortBy
     default:
       return state;
@@ -89,12 +89,12 @@ export function sortPosts(state = '', action) {
 export function commentModal(state = {}, action) {
   const {comment} = action
   switch (action.type) {
-    case ACTIONS.DISPLAY_FORM:
+    case ACTION_TYPES.DISPLAY_FORM:
       return {
         comment,
         isOpen: true
       }
-    case ACTIONS.HIDE_FORM:
+    case ACTION_TYPES.HIDE_FORM:
       return {
         isOpen: false
       }

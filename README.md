@@ -45,7 +45,13 @@ READABLE/
 
 ### Available Scripts
 
-Install Dependencies:
+Install and Start the API Server( server runs on port 3001)
+	`npm install`
+	 
+Run the API Server
+    `npm start`
+
+Install the project
 	`npm install`
  
 Run the project:

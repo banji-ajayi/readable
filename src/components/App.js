@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 
-import {loadAllPosts, loadCategories} from '../actions/index'
+import * as ACTION_CREATORS from '../actions/index'
+
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 import ListPosts from './ListPosts'
 
 class App extends Component {
   componentDidMount() {
-	  console.log(this.props);
-    const {loadAllPosts, loadCategories} = this.props
-    loadCategories()
-    loadAllPosts()
+	const ACTION_CREATORS = this.props;
+    ACTION_CREATORS.loadCategories()
+    ACTION_CREATORS.loadAllPosts()
   }
   render() {
     const {categories} = this.props
@@ -34,7 +34,8 @@ class App extends Component {
 }
 
 function mapStateToProps({posts, categories, filterByCategory, loadingData}) {
-  return {posts, categories, filterByCategory, loadingData}
+return {posts, categories, filterByCategory, loadingData}
 }
 
-export default connect(mapStateToProps, {loadAllPosts, loadCategories})(App)
+export default connect(mapStateToProps, ACTION_CREATORS)(App)
+
