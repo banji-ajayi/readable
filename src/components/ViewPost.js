@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-
-import {loadPostComments, addComment, updateComment, loadAllPosts, displayCommentForm, hideCommentForm} from '../actions/index'
+import * as Actions from '../actions/index'
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 import Post from './Post'
@@ -95,4 +94,4 @@ function mapStateToProps({posts, loadingData, comments, commentModal}) {
   return {posts, loadingData, comments, commentModal}
 }
 
-export default connect(mapStateToProps, {loadAllPosts,loadPostComments, displayCommentForm, hideCommentForm, addComment, updateComment})(ViewPost)
+export default connect(mapStateToProps, Actions)(ViewPost)

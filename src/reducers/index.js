@@ -1,12 +1,12 @@
 import * as ACTION_TYPES from '../actions/actions_types'
 
 export function categories(state = [], action) {
-  switch (action.type) {
-    case ACTION_TYPES.CATEGORIES_LOADED:
-      return action.categories
-    default:
-      return state
-  }
+	if (action.type === ACTION_TYPES.CATEGORIES_LOADED)
+	{
+		return action.categories
+	} else {
+		return state
+	}
 }
 
 export function posts(state = {}, action) {
